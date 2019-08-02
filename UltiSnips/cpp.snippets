@@ -1,0 +1,153 @@
+# Get header define string.
+global !p
+
+import os
+def get_header_define(snip):
+    inc = "include"
+    [file_name, ext_name] = os.path.splitext(path)
+    idx = file_name.rfind(inc)
+    if (idx >= 0):
+        header = file_name[(idx + len(inc) + 1):]
+        header = header.replace("/", "_") + "_H_"
+    else:
+        header = snip.basename() + "_H_"
+    return header.upper()
+
+def split_param(param):
+    params = str(param).split(' ')
+    if(len(params) > 1):
+        var = params[-1]
+    else:
+        var = param
+    return var
+
+def write_docstring_args(arglist, snip):
+    args = str(arglist).split(',')
+
+    if (len(args)) > 1:
+        c = 0
+        for arg in args:
+            var = split_param(arg)
+            if(c == 0):
+                snip.rv += var
+                c = 1
+            else:
+                snip += "/// \\param %s" % var.strip()
+    else:
+        var = split_param(args[0])
+        snip.rv = var
+
+endglobal
+
+
+#######################
+#    file header      #
+#######################
+snippet nan_cfh "add header define" b
+/// \file `!p snip.rv = fn`
+/// \brief Head file for class Ctest.
+/// 
+/// ${0:A detailed file description}.
+///
+/// \author ${1:author_name}
+/// \version ${2:0.0.1}
+/// \date ${3:`!v strftime("%b %d, %Y")`}
+
+#######################
+#    header define    #
+#######################
+snippet nan_chdef "add header define" b
+#ifndef ${1:`!p snip.rv = get_header_define(snip)`}
+#define $1
+
+${0:class}
+
+#endif /* $1 */
+endsnippet
+
+#######################
+#    new namespace    #
+#######################
+snippet nan_cns "namespace .. (namespace)"
+/// \brief ${2:A brief namespace description}.
+///
+/// ${3:A detailed namespace description, it should be 2 lines at least}.
+namespace ${1:namespace} {
+
+${0}
+
+} // namespace $1
+endsnippet
+
+###################
+#    new class    #
+###################
+snippet nan_ccls "add new class" b
+/// \brief ${2:A brief class description}.
+///
+/// ${3:A detailed calss description, it should be 2 lines at least}.
+///
+class ${1:NewClass} {
+ public:
+  ${0}
+  virtual ~$1();
+ private:
+  
+}; // class $3
+endsnippet
+
+#########################
+#    new mem func       #
+#########################
+snippet nan_cfunc "add new function" b
+/// \brief ${4:A brief class function description}.
+/// 
+/// ${5:A detailed description, it should be 2 lines at least}.
+///
+/// \param `!p write_docstring_args(t[3],snip)`
+/// \return ${6:describe what the function returns}.
+/// \see ${7:another func name}
+/// \note ${8:no note}.
+/// \warning ${9: no warning}.
+${1:ReturnType} ${2:FunctionName}(${3:param}) {
+	${0:FunctionBody}
+}
+endsnippet
+
+########################
+#    new mem var1      #
+########################
+snippet nan_cvar1 "add new mem var" b
+${1:type var} ///< ${2:brief description}.
+endsnippet
+
+########################
+#    new mem var2       #
+########################
+snippet nan_cvar2 "add new mem var"
+/// \brief ${3:A brief var description}.
+///
+/// ${4:A detailed var description, it should be 2 lines at least}.
+${1:type var} ///< ${2:brief description}.
+endsnippet
+
+####################
+#    new enum      #
+####################
+snippet nan_cenum "add new enum" b
+/// \brief ${4:A brief enum description}.
+///
+/// ${5:A detailed enum description, it should be 2 lines at least}.
+enum ${1:Tenum} {
+  ${2:elem}; ///< ${3:description}
+}
+endsnippet
+
+
+
+
+
+
+
+
+# vim:ft=snippets:

@@ -1,0 +1,41 @@
+"""""""""""""""""""""""""""""""""
+" Install plugins.
+"""""""""""""""""""""""""""""""""
+
+set nocompatible " Required.
+filetype off     " Required.
+
+let s:install_dir = expand('<sfile>:p:h')."/.."
+call plug#begin(s:install_dir . '/plugins')
+
+Plug 'altercation/vim-colors-solarized'
+Plug 'itchyny/lightline.vim'
+Plug 'haya14busa/incsearch.vim'
+Plug 'matze/vim-move'
+Plug 'szw/vim-maximizer'
+Plug 'airblade/vim-rooter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mbbill/undotree'
+" Plug 'vim-scripts/YankRing.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'MattesGroeger/vim-bookmarks'
+Plug 'Yggdroot/indentLine'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-fugitive'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete-clangx'
+" Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --clangd-completer' }
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'kassio/neoterm'
+Plug 'arakashic/chromatica.nvim'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+Plug 'vim-scripts/DoxygenToolkit.vim'
+
+call plug#end()
+filetype plugin indent on
