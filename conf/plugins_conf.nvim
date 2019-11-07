@@ -246,9 +246,16 @@ let g:mkdp_open_to_the_world = 1
 """""""""""""""""""""""
 " chromatica
 """""""""""""""""""""""
-let g:chromatica#libclang_path='/opt/clang8/lib'
-let g:chromatica#enable_at_startup=1
-let g:chromatica#responsive_mode=1
+"let g:chromatica#libclang_path='/opt/clang8/lib'
+"let g:chromatica#enable_at_startup=1
+"let g:chromatica#responsive_mode=1
+
+"""""""""""""""""""""""
+" vim-cpp-enhanced-highlight
+"""""""""""""""""""""""
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
 
 """""""""""""""""""""""
 " vim-session

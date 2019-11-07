@@ -98,5 +98,5 @@ set foldcolumn=1
 syntax enable
 
 " Python support.
-let g:python3_host_prog="/usr/bin/python3.6"
+" let g:python3_host_prog="/usr/bin/python3.6"
 

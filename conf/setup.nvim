@@ -32,7 +32,8 @@ Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --clangd-completer' }
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'kassio/neoterm'
-Plug 'arakashic/chromatica.nvim'
+" Plug 'arakashic/chromatica.nvim'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'vim-scripts/DoxygenToolkit.vim'
