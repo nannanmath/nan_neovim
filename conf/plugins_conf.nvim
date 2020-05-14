@@ -201,11 +201,20 @@ autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
 let g:indentLine_char = '|'
 let g:indentLine_color_term = 239
 let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
 
 """""""""""""""""""""""
 " Config Tabular
 """""""""""""""""""""""
 noremap <C-l> :Tabularize /
+
+"""""""""""""""""""""""
+" Config Tabular
+"""""""""""""""""""""""
+let g:asyncrun_open = 6
+nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
+
+
 
 """""""""""""""""""""""
 " Config fugitive
@@ -261,7 +270,7 @@ let g:cpp_class_decl_highlight = 1
 " vim-session
 """""""""""""""""""""""
 let g:session_directory='~/.nan_neovim/sessions'
-
+let g:session_autosave = 'no'
 
 
 

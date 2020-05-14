@@ -24,11 +24,13 @@ Plug 'honza/vim-snippets'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Yggdroot/indentLine'
 Plug 'godlygeek/tabular'
+Plug 'vhdirk/vim-cmake'
+Plug 'skywind3000/asyncrun.vim'
 Plug 'tpope/vim-fugitive'
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'Shougo/deoplete-clangx'
 " Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --clangd-completer' }
+Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --clang-completer' }
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'kassio/neoterm'
