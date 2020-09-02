@@ -16,14 +16,14 @@ source ~/.nan_neovim/conf/base_conf.nvim
 source ~/.nan_neovim/conf/plugins_conf.nvim
 " > ~/.config/nvim/init.vim
 
-echo "
+# echo "
 # Neovim
-if type nvim > /dev/null 2>&1; then
-  alias vim='nvim'
-fi
-" >> ~/.bashrc
+# if type nvim > /dev/null 2>&1; then
+#   alias vim='nvim'
+# fi
+# " >> ~/.bashrc
 
-source ~/.bashrc
+# source ~/.bashrc
 
 echo "Install Plugins ..."
 

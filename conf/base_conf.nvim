@@ -18,11 +18,15 @@ set confirm
 
 " Turn backup off.
 set nobackup
+set nowritebackup
 set nowb
 set noswapfile
 
-" Hidden startup message.
-set shortmess=atI
+" Don't pass messages to |ins-completion-menu|
+set shortmess+=c
+
+" Always show the signcolumn
+set signcolumn=yes
 
 " Save file for handling the permission-denied error.
 "command W w !sudo tee % > /dev/null
@@ -77,7 +81,7 @@ set wildignore+=*/tmp/*,*/.git/*
 set cmdheight=2
 
 " Buffer becomes hidden when it it abandoned.
-set hid
+set hidden
 
 " Turn off pulling down GUI menu.
 set winaltkeys=no
