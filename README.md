@@ -4,7 +4,7 @@ nan-neovim is a neovim configuration which is welcome to be used by others.
 This confiuration is tested on [MobaXterm][https://mobaxterm.mobatek.net/]
 based MS-Windows as local host and Ubuntu Server 20.04 as remote host.
 
-![nvim_screenshot](./screenshot/nvim.JPG)
+![nvim_screenshot](./screenshot/nvim.png)
 
 # Install
 
@@ -120,18 +120,3 @@ Config `coc.nvim` by editing `coc-settings.json`. Run `:CocConfig` and add follo
 
 * Completion & Snippets
 These functions are implemented by [coc.nvim][https://github.com/neoclide/coc.nvim].
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 
-
