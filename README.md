@@ -124,4 +124,5 @@ Config `coc.nvim` by editing `coc-settings.json`. Run `:CocConfig` and add follo
 | `<F12>`               | Open a term.            |
 
 * Completion & Snippets
+
 These functions are implemented by [coc.nvim][https://github.com/neoclide/coc.nvim].
