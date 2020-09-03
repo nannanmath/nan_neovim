@@ -4,7 +4,7 @@ nan-neovim is a neovim configuration which is welcome to be used by others.
 This confiuration is tested on [MobaXterm][https://mobaxterm.mobatek.net/]
 based MS-Windows as local host and Ubuntu Server 20.04 as remote host.
 
-![nvim_screenshot](./screenshot/nvim.png)
+![nvim_screenshot](./screenshot/nvim.JPG)
 
 # Install
 
@@ -91,11 +91,13 @@ Config `coc.nvim` by editing `coc-settings.json`. Run `:CocConfig` and add follo
 `<leader>` is `,`.
 
 * Window
+
 | Shortcut             | Action                              |
 | -------------------- | -----------------------             |
 | `<F4>`               | Toggle maximize / restore a window. |
 
 * Directory explore
+
 | Shortcut             | Action                              |
 | -------------------- | -----------------------             |
 | `<F2>`               | Toggle NERD Tree                       |
@@ -103,17 +105,20 @@ Config `coc.nvim` by editing `coc-settings.json`. Run `:CocConfig` and add follo
 | `v`                  | Open buffer in vertical split window   |
 
 * Comment function
+
 | Shortcut             | Action                  |
 | -------------------- | ----------------------- |
 | `<leader>c<space>`   | Toggle comment state    |
 
 * Undo & Yank
+
 | Shortcut             | Action                        |
 | -------------------- | -----------------------       |
 | `<F6>`               | Show a Yank ring.             |
 | `<F7>`               | Show a Undo tree in a window. |
 
 * Term
+
 | Shortcut             | Action                  |
 | -------------------- | ----------------------- |
 | `<F12>`               | Open a term.            |
