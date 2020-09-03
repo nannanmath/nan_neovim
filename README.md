@@ -1,7 +1,7 @@
 # Introduction
 
 nan-neovim is a neovim configuration which is welcome to be used by others.
-This confiuration is tested on [MobaXterm][https://mobaxterm.mobatek.net/]
+This confiuration is tested on [MobaXterm](https://mobaxterm.mobatek.net/)
 based MS-Windows as local host and Ubuntu Server 20.04 as remote host.
 
 ![nvim_screenshot](./screenshot/nvim.JPG)
@@ -9,11 +9,11 @@ based MS-Windows as local host and Ubuntu Server 20.04 as remote host.
 # Install
 
 * Install neovim
-Download `nvim.appimage` from [NEOVIM][https://github.com/neovim/neovim/releases/] website.
+Download `nvim.appimage` from [NEOVIM](https://github.com/neovim/neovim/releases/) website.
 Save it as `nvim` in a directory on your system `PATH`.
 
 * Python virtual env
-I make it by [miniconda][https://docs.conda.io/en/latest/miniconda.html].
+I make it by [miniconda](https://docs.conda.io/en/latest/miniconda.html).
 ```bash
 $> conda create -n pynvim python=3.8
 $> conda activate pynvim
@@ -125,4 +125,4 @@ Config `coc.nvim` by editing `coc-settings.json`. Run `:CocConfig` and add follo
 
 * Completion & Snippets
 
-These functions are implemented by [coc.nvim][https://github.com/neoclide/coc.nvim].
+These functions are implemented by [coc.nvim](https://github.com/neoclide/coc.nvim).
