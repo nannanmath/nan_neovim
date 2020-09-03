@@ -28,6 +28,7 @@ set noshowmode
 set colorcolumn=80
 highlight colorcolumn ctermbg=DarkRed
 
+
 """""""""""""""""""""""""""""""""
 " incsearch
 """""""""""""""""""""""""""""""""
@@ -35,6 +36,7 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
+
 
 """""""""""""""""""""""""""""""""
 " vim-move
@@ -46,15 +48,18 @@ nmap J <Plug>MoveLineDown
 nmap K <Plug>MoveLineUp
 "let g:move_key_modifier = 'M'
 
+
 """""""""""""""""""""""""""""""""
 " vim-maximizer
 """""""""""""""""""""""""""""""""
 let g:maximizer_default_mapping_key = '<F4>'
 
+
 """""""""""""""""""""""""""""""""
 " vim-rooter
 """""""""""""""""""""""""""""""""
 let g:rooter_change_directory_for_non_project_files = 'current'
+
 
 """""""""""""""""""""""""""""""""
 " nerdtree
@@ -70,6 +75,7 @@ let g:NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__']
 let g:NERDTreeWinSize=35
 let g:NERDTreeDirArrowExpandable='>'
 let g:NERDTreeDirArrowCollapsible='v'
+
 
 """""""""""""""""""""""""""""""""
 " nerdcommenter
@@ -98,95 +104,6 @@ let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
 
-"""""""""""""""""""""""""""""""""
-" ctrlp
-"""""""""""""""""""""""""""""""""
-" let g:ctrlp_map = '<Leader>p'
-" let g:ctrlp_cmd = 'CtrlP'
-" let g:ctrlp_working_path_mode = 'ra'
-" let g:ctrlp_match_window_bottom = 1
-" let g:ctrlp_max_height = 15
-" let g:ctrlp_by_filename = 1
-" set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-" let g:ctrlp_custom_ignore = {
-"     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-"     \ 'file': '\v\.(exe|so|dll)$',
-"     \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-"     \ }
-" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-"noremap <Leader>r :CtrlPMRUFiles<CR>
-" Add a plugin vim-Buffergator
-"noremap <Leader>b :CtrlPBuffer<CR> 
-
-"""""""""""""""""""""""""""""""""
-" Undotree
-"""""""""""""""""""""""""""""""""
-" nnoremap <F7> :UndotreeToggle<CR>
-
-"""""""""""""""""""""""""""""""""
-" YankRing
-"""""""""""""""""""""""""""""""""
-" nnoremap <silent> <F6> :YRShow<CR>
-
-"""""""""""""""""""""""""""""""""
-" vim-snipts
-"""""""""""""""""""""""""""""""""
-" let g:ultisnips_python_style="google"
-" let g:ultisnips_python_quoting_style="double"
-
-"""""""""""""""""""""""""""""""""
-" vim-bookmarks
-"""""""""""""""""""""""""""""""""
-" let g:bookmark_sign = '>>'
-" let g:bookmark_annotation_sign = '##'
-" let g:bookmark_highlight_lines  = 1
-" let g:bookmark_save_per_working_dir = 1
-" let g:bookmark_auto_save = 1
-" 
-" " Finds the Git super-project directory.
-" function! g:BMWorkDirFileLocation()
-"     let filename = 'bookmarks'
-"     let location = ''
-"     if isdirectory('.git')
-"         " Current work dir is git's work tree
-"         let location = getcwd().'/.git'
-"     else
-"         " Look upwards (at parents) for a directory named '.git'
-"         let location = finddir('.git', '.;')
-"     endif
-"     if len(location) > 0
-"         return location.'/.'.filename
-"     else
-"         return getcwd().'/.'.filename
-"     endif
-" endfunction
-" 
-" " Avoid keybinding conflicts with the Nerdtree.
-" let g:bookmark_no_default_key_mappings = 1
-" function! BookmarkMapKeys()
-"     nmap mm :BookmarkToggle<CR>
-"     nmap mi :BookmarkAnnotate<CR>
-"     nmap mn :BookmarkNext<CR>
-"     nmap mp :BookmarkPrev<CR>
-"     nmap ma :BookmarkShowAll<CR>
-"     nmap mc :BookmarkClear<CR>
-"     nmap mx :BookmarkClearAll<CR>
-"     nmap mkk :BookmarkMoveUp
-"     nmap mjj :BookmarkMoveDown
-" endfunction
-" function! BookmarkUnmapKeys()
-"     unmap mm
-"     unmap mi
-"     unmap mn
-"     unmap mp
-"     unmap ma
-"     unmap mc
-"     unmap mx
-"     unmap mkk
-"     unmap mjj
-" endfunction
-" autocmd BufEnter * :call BookmarkMapKeys()
-" autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
 
 """""""""""""""""""""""""
 " indentLine
@@ -196,16 +113,6 @@ let g:indentLine_color_term = 239
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
 
-"""""""""""""""""""""""
-" Config Tabular
-"""""""""""""""""""""""
-" noremap <C-l> :Tabularize /
-
-"""""""""""""""""""""""
-" Config Tabular
-"""""""""""""""""""""""
-" let g:asyncrun_open = 6
-" nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
 
 """""""""""""""""""""""
 " Config fugitive
@@ -333,6 +240,108 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+"""""""""""""""""""""""
+" Config Tabular
+"""""""""""""""""""""""
+" noremap <C-l> :Tabularize /
+
+"""""""""""""""""""""""
+" Config asyncrun
+"""""""""""""""""""""""
+" let g:asyncrun_open = 6
+" nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
+
+"""""""""""""""""""""""""""""""""
+" vim-snipts
+"""""""""""""""""""""""""""""""""
+let g:ultisnips_python_style="google"
+let g:ultisnips_python_quoting_style="double"
+
+"""""""""""""""""""""""""""""""""
+" ctrlp
+"""""""""""""""""""""""""""""""""
+" let g:ctrlp_map = '<Leader>p'
+" let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_working_path_mode = 'ra'
+" let g:ctrlp_match_window_bottom = 1
+" let g:ctrlp_max_height = 15
+" let g:ctrlp_by_filename = 1
+" set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+" let g:ctrlp_custom_ignore = {
+"     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+"     \ 'file': '\v\.(exe|so|dll)$',
+"     \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+"     \ }
+" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+"noremap <Leader>r :CtrlPMRUFiles<CR>
+" Add a plugin vim-Buffergator
+"noremap <Leader>b :CtrlPBuffer<CR> 
+
+"""""""""""""""""""""""""""""""""
+" Undotree
+"""""""""""""""""""""""""""""""""
+" nnoremap <F7> :UndotreeToggle<CR>
+
+"""""""""""""""""""""""""""""""""
+" YankRing
+"""""""""""""""""""""""""""""""""
+" nnoremap <silent> <F6> :YRShow<CR>
+
+
+"""""""""""""""""""""""""""""""""
+" vim-bookmarks
+"""""""""""""""""""""""""""""""""
+" let g:bookmark_sign = '>>'
+" let g:bookmark_annotation_sign = '##'
+" let g:bookmark_highlight_lines  = 1
+" let g:bookmark_save_per_working_dir = 1
+" let g:bookmark_auto_save = 1
+" 
+" " Finds the Git super-project directory.
+" function! g:BMWorkDirFileLocation()
+"     let filename = 'bookmarks'
+"     let location = ''
+"     if isdirectory('.git')
+"         " Current work dir is git's work tree
+"         let location = getcwd().'/.git'
+"     else
+"         " Look upwards (at parents) for a directory named '.git'
+"         let location = finddir('.git', '.;')
+"     endif
+"     if len(location) > 0
+"         return location.'/.'.filename
+"     else
+"         return getcwd().'/.'.filename
+"     endif
+" endfunction
+" 
+" " Avoid keybinding conflicts with the Nerdtree.
+" let g:bookmark_no_default_key_mappings = 1
+" function! BookmarkMapKeys()
+"     nmap mm :BookmarkToggle<CR>
+"     nmap mi :BookmarkAnnotate<CR>
+"     nmap mn :BookmarkNext<CR>
+"     nmap mp :BookmarkPrev<CR>
+"     nmap ma :BookmarkShowAll<CR>
+"     nmap mc :BookmarkClear<CR>
+"     nmap mx :BookmarkClearAll<CR>
+"     nmap mkk :BookmarkMoveUp
+"     nmap mjj :BookmarkMoveDown
+" endfunction
+" function! BookmarkUnmapKeys()
+"     unmap mm
+"     unmap mi
+"     unmap mn
+"     unmap mp
+"     unmap ma
+"     unmap mc
+"     unmap mx
+"     unmap mkk
+"     unmap mjj
+" endfunction
+" autocmd BufEnter * :call BookmarkMapKeys()
+" autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
 
 """""""""""""""""""""""
 " vim-floaterm
